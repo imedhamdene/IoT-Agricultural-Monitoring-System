@@ -1,0 +1,558 @@
+[
+    {
+        "id": "e3e654e69af8a059",
+        "type": "tab",
+        "label": "Agricultural Project",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "94437a683c6fbfa9",
+        "type": "mqtt in",
+        "z": "e3e654e69af8a059",
+        "name": "Temperature",
+        "topic": "plant_monitor/temperature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3d4e5f6.g7h8i9",
+        "inputs": 0,
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "b96260443cf0bd96",
+                "ed33d14a6b124e97"
+            ]
+        ]
+    },
+    {
+        "id": "b96260443cf0bd96",
+        "type": "ui_gauge",
+        "z": "e3e654e69af8a059",
+        "name": "",
+        "group": "e5f6g7h8.i9j0k1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 400,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "20d840ebea631bad",
+        "type": "mqtt in",
+        "z": "e3e654e69af8a059",
+        "name": "Humidity",
+        "topic": "plant_monitor/humidity",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3d4e5f6.g7h8i9",
+        "inputs": 0,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "501295c904b1f318",
+                "ed33d14a6b124e97"
+            ]
+        ]
+    },
+    {
+        "id": "501295c904b1f318",
+        "type": "ui_gauge",
+        "z": "e3e654e69af8a059",
+        "name": "",
+        "group": "e5f6g7h8.i9j0k1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 390,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2dd9f4761615d010",
+        "type": "mqtt in",
+        "z": "e3e654e69af8a059",
+        "name": "Light Level",
+        "topic": "plant_monitor/light",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3d4e5f6.g7h8i9",
+        "inputs": 0,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "e6dc1b84f478355d",
+                "ed33d14a6b124e97"
+            ]
+        ]
+    },
+    {
+        "id": "e6dc1b84f478355d",
+        "type": "ui_gauge",
+        "z": "e3e654e69af8a059",
+        "name": "",
+        "group": "e5f6g7h8.i9j0k1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Light",
+        "label": "raw",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 380,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a4b1bd7630e7e128",
+        "type": "mqtt in",
+        "z": "e3e654e69af8a059",
+        "name": "Soil Moisture",
+        "topic": "plant_monitor/soil_moisture",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3d4e5f6.g7h8i9",
+        "inputs": 0,
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "d04c58365dac72f3",
+                "ed33d14a6b124e97"
+            ]
+        ]
+    },
+    {
+        "id": "d04c58365dac72f3",
+        "type": "ui_gauge",
+        "z": "e3e654e69af8a059",
+        "name": "",
+        "group": "e5f6g7h8.i9j0k1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Soil Moisture",
+        "label": "raw",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 410,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "baa42a5f99bf306b",
+        "type": "mqtt in",
+        "z": "e3e654e69af8a059",
+        "name": "Status",
+        "topic": "plant_monitor/status",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "c3d4e5f6.g7h8i9",
+        "inputs": 0,
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "ef0baaa7bd06334b"
+            ]
+        ]
+    },
+    {
+        "id": "ef0baaa7bd06334b",
+        "type": "ui_text",
+        "z": "e3e654e69af8a059",
+        "group": "o5p6q7r8.s9t0u1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "73ec6a2040b88b2b",
+        "type": "ui_switch",
+        "z": "e3e654e69af8a059",
+        "name": "Water Pump",
+        "label": "Pump",
+        "tooltip": "",
+        "group": "o5p6q7r8.s9t0u1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "topic": "plant_monitor/pump/set",
+        "onvalue": "ON",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "officon": "",
+        "offcolor": "",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            [
+                "e46ad54992342dcf"
+            ]
+        ]
+    },
+    {
+        "id": "e46ad54992342dcf",
+        "type": "mqtt out",
+        "z": "e3e654e69af8a059",
+        "name": "Pump Control",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "c3d4e5f6.g7h8i9",
+        "x": 390,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ad728faa3e9f1e90",
+        "type": "ui_switch",
+        "z": "e3e654e69af8a059",
+        "name": "Grow Lights",
+        "label": "Lights",
+        "tooltip": "",
+        "group": "o5p6q7r8.s9t0u1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "topic": "plant_monitor/lights/set",
+        "onvalue": "ON",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "officon": "",
+        "offcolor": "",
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "213a1ba9d51d3b56"
+            ]
+        ]
+    },
+    {
+        "id": "213a1ba9d51d3b56",
+        "type": "mqtt out",
+        "z": "e3e654e69af8a059",
+        "name": "Lights Control",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "c3d4e5f6.g7h8i9",
+        "x": 390,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f5e396478c7f4e48",
+        "type": "http in",
+        "z": "e3e654e69af8a059",
+        "name": "Image Upload",
+        "url": "/upload/image",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "2eb92c1c064b7145"
+            ]
+        ]
+    },
+    {
+        "id": "2eb92c1c064b7145",
+        "type": "function",
+        "z": "e3e654e69af8a059",
+        "name": "Convert to Base64",
+        "func": "msg.payload = \"data:image/jpeg;base64,\" + msg.payload.toString('base64');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "8803376d06dd666e"
+            ]
+        ]
+    },
+    {
+        "id": "8803376d06dd666e",
+        "type": "ui_template",
+        "z": "e3e654e69af8a059",
+        "group": "w3x4y5z6.a7b8c9",
+        "name": "Vehicle Camera",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<div style=\"display:flex; justify-content:center; align-items:center; height:100%;\">\n <img src=\"{{msg.payload}}\" style=\"max-width:100%; max-height:100%;\"/>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78b5a023fd65f43c",
+        "type": "comment",
+        "z": "e3e654e69af8a059",
+        "name": "--- Sensor Data ---",
+        "info": "",
+        "x": 150,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "2dcb228584206e95",
+        "type": "comment",
+        "z": "e3e654e69af8a059",
+        "name": "--- Actuator Control ---",
+        "info": "",
+        "x": 160,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "38a0cf610b70ebd1",
+        "type": "comment",
+        "z": "e3e654e69af8a059",
+        "name": "--- Image Feed ---",
+        "info": "",
+        "x": 140,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ed33d14a6b124e97",
+        "type": "join",
+        "z": "e3e654e69af8a059",
+        "name": "Combine Sensor Data",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "6",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "08250de8626f39e0"
+            ]
+        ]
+    },
+    {
+        "id": "08250de8626f39e0",
+        "type": "function",
+        "z": "e3e654e69af8a059",
+        "name": "Format Sensor Data",
+        "func": "// The incoming payload is an object with topics as keys\n// e.g., { \"plant_monitor/temperature\": \"23.5\", ... }\n\nconst temp_topic = \"plant_monitor/temperature\";\nconst humid_topic = \"plant_monitor/humidity\";\nconst light_topic = \"plant_monitor/light\";\nconst soil_topic = \"plant_monitor/soil_moisture\";\n\n// Create a new, clean payload object\nconst newPayload = {\n    // Use parseFloat to ensure numbers are stored as numbers, not strings\n    temperature: parseFloat(msg.payload[temp_topic]),\n    humidity: parseFloat(msg.payload[humid_topic]),\n    light: parseInt(msg.payload[light_topic], 10),\n    soil_moisture: parseInt(msg.payload[soil_topic], 10),\n    // Add a timestamp so we know when the reading was taken\n    timestamp: new Date()\n};\n\n// Replace the old msg.payload with our new, clean object\nmsg.payload = newPayload;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 640,
+        "y": 200,
+        "wires": [
+            [
+                "fa6a88439d50166e",
+                "c940ba23a857fdea"
+            ]
+        ]
+    },
+    {
+        "id": "fa6a88439d50166e",
+        "type": "debug",
+        "z": "e3e654e69af8a059",
+        "name": "Data to MongoDB",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b33e950fa1252e85",
+        "type": "comment",
+        "z": "e3e654e69af8a059",
+        "name": "--- Database Logging ---",
+        "info": "",
+        "x": 580,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c940ba23a857fdea",
+        "type": "mongodb4",
+        "z": "e3e654e69af8a059",
+        "clientNode": "eb63f18c7567f6a9",
+        "collection": "sensor_readings",
+        "operation": "insertOne",
+        "maxTimeMS": "",
+        "handleDocId": false,
+        "name": "Save to MongoDB",
+        "x": 880,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3d4e5f6.g7h8i9",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e5f6g7h8.i9j0k1",
+        "type": "ui_group",
+        "name": "Sensors",
+        "tab": "f6g7h8i9.j0k1l2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "o5p6q7r8.s9t0u1",
+        "type": "ui_group",
+        "name": "Controls",
+        "tab": "f6g7h8i9.j0k1l2",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "w3x4y5z6.a7b8c9",
+        "type": "ui_group",
+        "name": "Camera Feed",
+        "tab": "f6g7h8i9.j0k1l2",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "eb63f18c7567f6a9",
+        "type": "mongodb4-client",
+        "name": "",
+        "protocol": "mongodb+srv",
+        "hostname": "cluster0.r7d8tec.mongodb.net",
+        "port": "",
+        "dbName": "agricultural_project",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": true,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "30000",
+        "socketTimeoutMS": "0",
+        "minPoolSize": "0",
+        "maxPoolSize": "100",
+        "maxIdleTimeMS": "0",
+        "uri": "mongodb+srv://imedhamdene_db_user:<PJP3Ln7KQ0f7JFBP>@cluster0.r7d8tec.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "advanced": "{}",
+        "uriTabActive": "tab-uri-simple"
+    },
+    {
+        "id": "f6g7h8i9.j0k1l2",
+        "type": "ui_tab",
+        "name": "Plant Monitoring",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
